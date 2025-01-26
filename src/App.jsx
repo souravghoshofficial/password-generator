@@ -90,6 +90,9 @@ const App = () => {
             <label htmlFor="character" className="cursor-pointer">Special Character</label>
           </div>
         </div>
+        <div>
+          <button onClick={passwordGenerator} className=" cursor-pointer mt-3 px-3 py-1.5 bg-emerald-500 active:bg-emerald-600 rounded-lg text-black font-semibold">Regenerate</button>
+          </div>
       </div>
       <h2 className="mt-4 text-sm">
         Made With ❤️ by <a href="https://www.linkedin.com/in/souravghosh121" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
