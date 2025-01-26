@@ -95,7 +95,7 @@ const App = () => {
           </div>
       </div>
       <h2 className="mt-4 text-sm">
-        Made With ❤️ by <a href="https://www.linkedin.com/in/souravghosh121" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
+        Made With ❤️ by <a href="https://www.linkedin.com/in/souravghosh121" target="_blank" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
       </h2>
     </div>
   );
