@@ -1,5 +1,6 @@
 import React from "react";
 import { useState , useCallback , useEffect , useRef } from "react";
+import linkIcon from "./assets/external-link-line.svg";
 
 const App = () => {
   const [length, setLength] = useState(8);
@@ -42,7 +43,7 @@ const App = () => {
 
 
   return (
-    <div className="w-full h-screen bg-black text-white flex justify-center items-center">
+    <div className="w-full h-screen bg-black text-white flex flex-col justify-center items-center">
       <div className="bg-[#171717] p-5 rounded-lg flex flex-col justify-center items-center">
         <div className=" mt-1 mb-4">
           <h1 className="text-emerald-500 text-2xl font-bold font-sans italic">Password Generator</h1>
@@ -57,7 +58,7 @@ const App = () => {
           />
           <button onClick={copyPasswordToClipboard} className="px-3 py-1.5 border-2 border-emerald-400 bg-emerald-400 active:bg-emerald-500 active:border-emerald-500 rounded-r text-black font-semibold cursor-pointer">{copyBtnText}</button>
         </div>
-        <div className="mt-4 flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center gap-2 lg:gap-4 lg:gap-4">
+        <div className="mt-4 flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center gap-2 lg:gap-4 md:gap-4">
           <div className="flex items-center gap-1">
             <input 
             type="range" 
@@ -90,6 +91,9 @@ const App = () => {
           </div>
         </div>
       </div>
+      <h2 className="mt-4 text-sm">
+        Made With ❤️ by <a href="https://www.linkedin.com/in/souravghosh121" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
+      </h2>
     </div>
   );
 };
