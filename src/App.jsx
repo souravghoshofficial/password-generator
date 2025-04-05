@@ -72,7 +72,7 @@ const App = () => {
     <div className="w-full h-screen bg-black text-white flex flex-col justify-center items-center">
       <div className="bg-[#171717] p-5 rounded-lg flex flex-col justify-center items-center">
         <div className=" mt-1 mb-4">
-          <h1 className="text-emerald-500 text-2xl font-bold font-sans italic">Password Generator</h1>
+          <h1 className="text-emerald-500 text-2xl font-bold font-sans italic">Password Crafter</h1>
         </div>
         <div className="flex items-center w-[95%]">
           <input 
