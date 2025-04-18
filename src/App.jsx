@@ -38,7 +38,6 @@ const App = () => {
         }
       }
       setPassword(generatedPassword);
-      setCopyBtnText("Copy");
     } else {
       if (numberFlag) {
         characters += numbers;
