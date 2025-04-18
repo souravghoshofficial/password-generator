@@ -87,7 +87,7 @@ const App = () => {
           <span className="text-white comic-neue-regular-italic">Crafter</span>
         </h1>
       </div>
-      <div className="bg-[#171717] p-6 w-[90%] md:w-[30%] rounded-lg flex flex-col justify-center items-center">
+      <div className="bg-zinc-900 border border-zinc-400/15 p-6 w-[90%] md:w-[30%] rounded-lg flex flex-col justify-center items-center">
         <div className="mt-2 flex items-center w-[95%]">
           <input
             type="text"
