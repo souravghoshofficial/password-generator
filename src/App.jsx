@@ -27,11 +27,11 @@ const App = () => {
         let randomWord = generate({minLength:3, maxLength:6});
         randomWord = randomWord.charAt(0).toUpperCase() + randomWord.slice(1);
         generatedPassword += randomWord;
-        if(numberFlag){
-          generatedPassword +=  numbers[Math.floor(Math.random() * numbers.length)];
-        }
         if(characterFlag){
           generatedPassword += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+        }
+        if(numberFlag){
+          generatedPassword +=  numbers[Math.floor(Math.random() * numbers.length)];
         }
       }       
       setPassword(generatedPassword);
@@ -70,11 +70,11 @@ const App = () => {
 
   return (
     <div className="w-full h-screen bg-black text-white flex flex-col justify-center items-center">
-      <div className="bg-[#171717] p-5 rounded-lg flex flex-col justify-center items-center">
-        <div className=" mt-1 mb-4">
-          <h1 className="text-emerald-500 text-2xl font-bold font-sans italic">Password Generator</h1>
+       <div className="mb-5">
+          <h1 className="text-emerald-500 text-3xl font-sans italic">Password <span className="text-white comic-neue-regular-italic">Crafter</span></h1>
         </div>
-        <div className="flex items-center w-[95%]">
+      <div className="bg-[#171717] p-6 w-[90%] md:w-[30%] rounded-lg flex flex-col justify-center items-center">
+        <div className="mt-2 flex items-center w-[95%]">
           <input 
           type="text" 
           value={password} 
@@ -84,8 +84,8 @@ const App = () => {
           />
           <button onClick={copyPasswordToClipboard} className="px-3 py-1.5 border-2 border-emerald-400 bg-emerald-400 active:bg-emerald-500 active:border-emerald-500 rounded-r text-black font-semibold cursor-pointer">{copyBtnText}</button>
         </div>
-        <div className="px-3.5 mt-4 flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center gap-2 lg:gap-4 md:gap-4">
-        <div className={` ${memorablePasswordFlag ? "hidden" : "block"} flex items-center gap-1`}>
+        <div className="px-3.5 mt-4 flex flex-col gap-1 w-[95%]">
+        <div className={` ${memorablePasswordFlag ? "hidden" : "block"} flex items-center gap-1.5`}>
             <input 
             type="range" 
             min="8"
@@ -96,7 +96,7 @@ const App = () => {
             />
             <h3>Length : {length}</h3>
           </div>
-          <div className={` ${memorablePasswordFlag ? "block" : "hidden"} flex items-center gap-1`}>
+          <div className={` ${memorablePasswordFlag ? "block" : "hidden"} flex items-center gap-1.5`}>
             <input 
             type="range" 
             min="1"
@@ -138,12 +138,12 @@ const App = () => {
             <label htmlFor="memorable" className="cursor-pointer">Memorable Password</label>
           </div>
         </div>
-        <div>
-          <button onClick={passwordGenerator} className=" cursor-pointer mt-3 px-3 py-1.5 bg-emerald-500 active:bg-emerald-600 rounded-lg text-black font-semibold">Regenerate</button>
-          </div>
+        <div className="mt-3 mb-1">
+          <button onClick={passwordGenerator} className=" cursor-pointer px-3 py-1.5 bg-emerald-500 active:bg-emerald-600 rounded-lg text-black font-semibold">Regenerate</button>
+        </div>
       </div>
       <h2 className="mt-4 text-sm">
-        Made With ❤️ by <a href="https://www.linkedin.com/in/souravghosh121" target="_blank" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
+        Made With ❤️ by <a href="https://souravghosh.me" target="_blank" className="text-emerald-400"> Sourav <img src={linkIcon} className="w-3 pb-0.5 inline-block" /> </a>
       </h2>
     </div>
   );
